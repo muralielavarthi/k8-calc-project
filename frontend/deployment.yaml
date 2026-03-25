@@ -3,6 +3,9 @@ kind: Deployment
 metadata:
   name: frontend-deployment
   namespace: calc-namespace
+  labels:
+    Project: calc
+    division: finance
 spec:
   replicas: 2
   selector:
