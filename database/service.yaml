@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: calc-cluster-ip-service-mysql
+  namespace: calc-namespace
+spec:
+  selector:
+    Project: calc
+    division: finance
+  ports:
+    - protocol: TCP
+      port: 3306
+      targetPort: 3306

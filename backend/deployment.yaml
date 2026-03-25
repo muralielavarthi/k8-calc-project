@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      Project: calc
+      division: finance
+  template:
+    metadata:
+      labels:
+        Project: calc
+        division: finance
+    spec:
+      containers:
+        - name: backend
+          image: muralielavarthi/backend:1.0.0
