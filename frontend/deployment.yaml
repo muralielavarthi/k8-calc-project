@@ -21,6 +21,7 @@ spec:
       containers:
         - name: frontend
           image: muralielavarthi/frontend:2.0.0
+          command: ["nginx", "-g", "daemon off;", "-c", "/etc/nginx/nginx.conf"]
           volumeMounts:
             - name: nginx-config-volume
               mountPath: /etc/nginx/nginx.conf
@@ -29,3 +30,5 @@ spec:
         - name: nginx-config-volume
           configMap:
             name: nginx-config
+
+            #subPath: nginx.conf to replace only the file, not the whole directory.
