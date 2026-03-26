@@ -4,11 +4,13 @@ metadata:
   name: frontend
   namespace: calc-namespace
   labels:
+    app: frontend
     project: calc
     division: finance
 spec:
   type: LoadBalancer
   selector:
+    app: frontend
     project: calc
     division: finance
   ports:

@@ -4,10 +4,12 @@ metadata:
   name: mysql
   namespace: calc-namespace
   labels:
+    app: mysql
     project: calc
     division: finance
 spec:
   selector:
+    app: mysql
     project: calc
     division: finance
   ports:

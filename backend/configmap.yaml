@@ -4,6 +4,7 @@ metadata:
   name: backend-config
   namespace: calc-namespace
   labels:
+    app: backend
     project: calc
     division: finance
 data:

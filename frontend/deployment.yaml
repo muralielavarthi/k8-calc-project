@@ -4,24 +4,27 @@ metadata:
   name: frontend-deployment
   namespace: calc-namespace
   labels:
+    app: frontend
     project: calc
     division: finance
 spec:
   replicas: 2
   selector:
     matchLabels:
+      app: frontend
       project: calc
       division: finance
   template:
     metadata:
       labels:
+        app: frontend
         project: calc
         division: finance
     spec:
       containers:
         - name: frontend
           image: muralielavarthi/frontend:2.0.0
-          command: ["nginx", "-g", "daemon off;", "-c", "/etc/nginx/nginx.conf"]
+          command: ["nginx", "-g", "daemon off;", "-c", "/etc/nginx/nginx.conf"] # override the default command to use our custom nginx.conf
           volumeMounts:
             - name: nginx-config-volume
               mountPath: /etc/nginx/nginx.conf
