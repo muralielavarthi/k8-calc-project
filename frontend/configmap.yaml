@@ -8,10 +8,18 @@ metadata:
     division: finance
 data:
   nginx.conf: |
+    user nginx;
     pid /tmp/nginx.pid;
+
     events {}
 
     http {
+        include /etc/nginx/mime.types;
+        default_type application/octet-stream;
+
+        sendfile on;
+        keepalive_timeout 65;
+
         server {
             listen 80;
 
