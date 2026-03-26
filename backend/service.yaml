@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: calc-cluster-ip-service-backend
+  name: backend # service name act as dns name for other services to connect
   namespace: calc-namespace
   labels:
     project: calc
