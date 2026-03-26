@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: muralielavarthi/frontend:1.0.0
+          image: muralielavarthi/frontend:2.0.0
           volumeMounts:
             - name: nginx-config-volume
               mountPath: /etc/nginx/nginx.conf
