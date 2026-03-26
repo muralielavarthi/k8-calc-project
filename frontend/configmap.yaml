@@ -8,6 +8,7 @@ metadata:
     division: finance
 data:
   nginx.conf: |
+    pid /tmp/nginx.pid;
     events {}
 
     http {
