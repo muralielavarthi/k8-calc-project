@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: database-config
+  namespace: calc-namespace
+  labels:
+    project: calc
+    division: finance
+data:
+  MYSQL_ROOT_PASSWORD: root
+  MYSQL_DATABASE: calcdb
+  MYSQL_HOST: mysql
+  MYSQL_PORT: "3306"

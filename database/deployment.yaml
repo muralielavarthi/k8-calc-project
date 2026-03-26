@@ -21,3 +21,6 @@ spec:
       containers:
         - name: mysql
           image: muralielavarthi/mysql:1.0.0
+          envFrom:
+            - configMapRef:
+                name: database-config
