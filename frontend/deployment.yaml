@@ -21,11 +21,11 @@ spec:
       containers:
         - name: frontend
           image: muralielavarthi/frontend:2.0.0
-          volumeMounts:
-            - name: nginx-config-volume
-              mountPath: /etc/nginx/nginx.conf
-              subPath: nginx.conf
-      volumes:
-        - name: nginx-config-volume
-          configMap:
-            name: nginx-config
+          #volumeMounts:
+          # - name: nginx-config-volume
+          #  mountPath: /etc/nginx/nginx.conf
+          # subPath: nginx.conf
+      #volumes:
+      # - name: nginx-config-volume
+      #  configMap:
+      #   name: nginx-config
