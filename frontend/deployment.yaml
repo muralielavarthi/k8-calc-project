@@ -4,20 +4,23 @@ metadata:
   name: frontend-deployment
   namespace: calc-namespace
   labels:
-    Project: calc
+    project: calc
     division: finance
 spec:
   replicas: 2
   selector:
     matchLabels:
-      Project: calc
+      project: calc
       division: finance
   template:
     metadata:
       labels:
-        Project: calc
+        project: calc
         division: finance
     spec:
       containers:
         - name: frontend
           image: muralielavarthi/frontend:1.0.0
+          envFrom:
+            - configMapRef:
+                name: frontend-config

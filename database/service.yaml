@@ -3,9 +3,12 @@ kind: Service
 metadata:
   name: calc-cluster-ip-service-mysql
   namespace: calc-namespace
+  labels:
+    project: calc
+    division: finance
 spec:
   selector:
-    Project: calc
+    project: calc
     division: finance
   ports:
     - protocol: TCP

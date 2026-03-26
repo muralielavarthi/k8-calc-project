@@ -4,20 +4,23 @@ metadata:
   name: backend-deployment
   namespace: calc-namespace
   labels:
-    Project: calc
+    project: calc
     division: finance
 spec:
   replicas: 2
   selector:
     matchLabels:
-      Project: calc
+      project: calc
       division: finance
   template:
     metadata:
       labels:
-        Project: calc
+        project: calc
         division: finance
     spec:
       containers:
         - name: backend
           image: muralielavarthi/backend:1.0.0
+          envFrom:
+            - configMapRef:
+                name: backend-config

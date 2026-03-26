@@ -4,18 +4,18 @@ metadata:
   name: mysql-deployment
   namespace: calc-namespace
   labels:
-    Project: calc
+    project: calc
     division: finance
 spec:
   replicas: 2
   selector:
     matchLabels:
-      Project: calc
+      project: calc
       division: finance
   template:
     metadata:
       labels:
-        Project: calc
+        project: calc
         division: finance
     spec:
       containers:

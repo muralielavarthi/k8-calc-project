@@ -3,10 +3,13 @@ kind: Service
 metadata:
   name: calc-load-balancer-service-frontend
   namespace: calc-namespace
+  labels:
+    project: calc
+    division: finance
 spec:
   type: LoadBalancer
   selector:
-    Project: calc
+    project: calc
     division: finance
   ports:
     - protocol: TCP

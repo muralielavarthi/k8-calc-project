@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: frontend-config
+  namespace: calc-namespace
+  labels:
+    project: calc
+    division: finance
+data:
+  BACKEND_PORT: "8080"
