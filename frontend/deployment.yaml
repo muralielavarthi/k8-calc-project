@@ -21,6 +21,11 @@ spec:
       containers:
         - name: frontend
           image: muralielavarthi/frontend:1.0.0
-          envFrom:
-            - configMapRef:
-                name: frontend-config
+          volumeMounts:
+            - name: nginx-config-volume
+              mountPath: /etc/nginx/nginx.conf
+              subPath: nginx.conf
+      volumes:
+        - name: nginx-config-volume
+          configMap:
+            name: nginx-config
