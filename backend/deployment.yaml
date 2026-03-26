@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: muralielavarthi/backend:1.0.0
+          image: muralielavarthi/backend:2.0.0
           envFrom:
             - configMapRef:
                 name: backend-config
