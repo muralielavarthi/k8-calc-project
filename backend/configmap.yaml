@@ -4,7 +4,7 @@ metadata:
   name: backend-config
   namespace: calc-namespace
   labels:
-    Project: calc
+    project: calc
     division: finance
 data:
   BACKEND_PORT: "8080"
