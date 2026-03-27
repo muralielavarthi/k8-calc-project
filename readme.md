@@ -4,3 +4,5 @@
 - Deployment
 - ConfigMap (nginx.conf)
 - Service (LoadBalancer, NodePort, ClusterIP)
+
+<img width="915" height="678" alt="image" src="https://github.com/user-attachments/assets/aaa92f7c-6610-4c58-bf9c-325eb7860ec8" />
