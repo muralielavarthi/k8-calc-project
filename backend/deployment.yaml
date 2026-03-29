@@ -10,7 +10,7 @@ metadata:
 spec:
   replicas: 2
   selector:
-    matchLabels:
+    matchLabels: # used to identify the pods that belong to this deployment, has to match .spec.template.metadata.labels
       app: backend
       project: calc
       division: finance
